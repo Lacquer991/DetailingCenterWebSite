@@ -1,0 +1,235 @@
+.header__nav .nav__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .nav__select {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #660d0d;
+    color: #ffffff;
+    padding: 8px 0;
+    width: 140px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    text-align-last: center;
+    text-align: center;
+}
+
+.header .nav__select {
+    border-color: #660d0d;
+    background-color: #660d0d;
+}
+
+.header .header__login-link {
+    text-decoration: none;
+}
+.hero {
+    text-align: left;
+    padding: 60px 20px;
+}
+
+.hero__title {
+    font-size: 40px;
+    margin-right: 20%;
+}
+
+.hero__subtitle {
+    font-size: 15px;
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.booking, .reviews {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.booking__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.booking__form .booking__label {
+    margin-top: 22px;
+}
+
+.booking__row {
+    display: flex;
+    gap: 15px;
+}
+
+.booking__input,
+.booking__textarea,
+.booking__select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+.booking__select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #333;
+    background-color: #000;
+    cursor: pointer;
+    transition: border 0.3s, background-color 0.3s;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.booking__select:hover {
+    border-color: #ffffff;
+    background-color: #000;
+}
+
+.booking__select:focus {
+    outline: none;
+}
+
+.review {
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.review__title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review__author {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.review__text {
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    .header{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+
+    .reviews {
+        display: none;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .header__right {
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .header{
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .header__left {
+        display: none;
+    }
+
+    .header__right {
+        margin-top: 0;
+        gap: 5px;
+    }
+
+    .header__nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .header .btn--primary {
+        width: 100%;
+        padding: 9px;
+        max-width: 100%;
+    }
+
+    .hero__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footer__right {
+        margin-bottom: 10px;
+    }
+
+    .footer__left {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__nav {
+        justify-content: left;
+        margin-bottom: 10px;
+    }
+
+
+    .footer__logo {
+        justify-content: left;
+    }
+
+    .footer__contacts {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+    .footer__contacts .footer__text {
+        margin: 2px;
+        line-height: 1.4;
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+          content="LCQ Detail, детейлинг, уход за автомобилем, мойка, полировка, автосервис, запись онлайн">
+    <meta name="description"
+          content="LCQ Detail — профессиональные услуги детейлинга и ухода за автомобилем. Запишитесь онлайн на мойку, полировку и защиту авто.">
+    <title>LCQ Detail</title>
+    <link rel="stylesheet" href="/css/baseStyle.css">
+    <link rel="stylesheet" href="/css/mainPageStyle.css">
+    <script type="module" src="/js/PageLoad.js"></script>
+    <script type="module" src="/js/auth/loginButton.js"></script>
+</head>
+<body class="page">
+
+<header class="header">
+    <div class="header__left">
+        <div class="header__logo">LCQ<br>DETAIL</div>
+        <div class="header__contacts">
+            <p class="header__contact">lcqDtl@gmail.com</p>
+            <p class="header__contact">+7 (999) 999-99-99</p>
+        </div>
+    </div>
+    <div class="header__right">
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <label class="nav__label" for="city"></label>
+                    <select class="nav__select" id="city">
+                        <option value="">Выберете город</option>
+                        <option value="tmz">Туймазы</option>
+                        <option value="spb">Санкт-Петербург</option>
+                        <option value="msc">Москва</option>
+                    </select>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/galleryPage/index.html">Галерея</a></li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/servicesPage/index.html">Услуги</a></li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/aboutPage/index.html">О нас</a></li>
+            </ul>
+        </nav>
+        <a href="/DetailingCenterWebSite/html/authPages/login.html" class="header__login-link">
+            <button class="btn btn--primary">Войти</button>
+        </a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1 class="hero__title">LCQ Detail — стандарт качества в детейлинге</h1>
+    <p class="hero__subtitle">Индивидуальный подход, сертифицированные технологии, гарантированный результат</p>
+    <div class="hero__buttons">
+        <a href="#booking" class="btn btn--primary">Записаться сейчас</a>
+        <button class="btn btn--secondary">Записаться на консультацию</button>
+    </div>
+</section>
+
+<main class="content">
+    <section id="booking" class="booking">
+        <h2 class="booking__title">Онлайн-запись</h2>
+        <form class="booking__form">
+            <label class="booking__label" for="car-type">Тип авто</label>
+            <select class="booking__select" id="car-type">
+                <option value="">Выберите тип авто</option>
+                <option value="sedan">Седан</option>
+                <option value="hatchback">Купе</option>
+                <option value="suv">SUV</option>
+                <option value="hatchback">Хэтчбек</option>
+            </select>
+
+            <label class="booking__label" for="service-type">Тип услуги</label>
+            <select class="booking__select" id="service-type">
+                <option value="">Выберите тип услуги</option>
+                <option value="washing">Мойка</option>
+                <option value="detailing">Детейлинг</option>
+                <option value="polishing">Полировка</option>
+            </select>
+
+            <div class="booking__row">
+                <label class="booking__label">Дата <input class="booking__input" type="date"></label>
+                <label class="booking__label">Время <input class="booking__input" type="time"></label>
+            </div>
+
+            <label class="booking__label" for="service-address">Адрес предпочитаемого сервиса</label>
+            <select class="booking__select" id="service-address">
+                <option value="">Выберите адрес сервиса</option>
+                <option value="address1">Адрес 1</option>
+                <option value="address2">Адрес 2</option>
+                <option value="address3">Адрес 3</option>
+            </select>
+
+            <div class="booking__row">
+                <label class="booking__label">Почта <input class="booking__input" type="email"></label>
+                <label class="booking__label">Телефон <input class="booking__input" type="tel"></label>
+            </div>
+
+            <label class="booking__label">Комментарий к записи
+                <textarea class="booking__textarea"></textarea>
+            </label>
+
+            <button type="submit" class="btn btn--secondary">Подтвердить запись</button>
+        </form>
+    </section>
+
+    <aside class="reviews">
+        <h2 class="reviews__title">Отзывы</h2>
+
+        <article class="review">
+            <h3 class="review__title">Отзыв 1 ★★★★★</h3>
+            <p class="review__author"><strong>Имя Фамилия</strong></p>
+            <p class="review__text">Текст отзыва клиента</p>
+        </article>
+
+        <article class="review">
+            <h3 class="review__title">Отзыв 2 ★★★★☆</h3>
+            <p class="review__author"><strong>Имя Фамилия</strong></p>
+            <p class="review__text">Текст отзыва клиента</p>
+        </article>
+
+        <article class="review">
+            <h3 class="review__title">Отзыв 3 ★★★★★</h3>
+            <p class="review__author"><strong>Имя Фамилия</strong></p>
+            <p class="review__text">Текст отзыва клиента</p>
+        </article>
+
+        <a href="/DetailingCenterWebSite/html/reviewsPage/index.html" class="btn btn--secondary">Открыть все отзывы</a>
+    </aside>
+</main>
+
+<footer class="footer">
+    <div class="footer__left">
+        <div class="footer__logo">
+            <p class="footer__text">LCQ<br>DETAIL</p>
+            <div id="loadTime"></div>
+        </div>
+        <div class="footer__contacts">
+            <p class="footer__text">lcqDtl@gmail.com</p>
+            <p class="footer__text">+7 (999) 999-99-99</p>
+        </div>
+    </div>
+    <div class="footer__right">
+        <nav class="nav footer__nav">
+            <ul class="nav__list">
+                <li class="footer__item"><a class="footer__link" href="/DetailingCenterWebSite/html/servicesPage/index.html">Услуги</a></li>
+                <li class="footer__item"><a class="footer__link" href="/DetailingCenterWebSite/html/galleryPage/index.html">Галерея</a></li>
+                <li class="footer__item"><a class="footer__link" href="/DetailingCenterWebSite/html/reviewsPage/index.html">Отзывы</a></li>
+                <li class="footer__item"><a class="footer__link" href="/DetailingCenterWebSite/html/aboutPage/index.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+</body>
+</html>

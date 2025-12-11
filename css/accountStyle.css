@@ -1,0 +1,161 @@
+.account {
+    width: 60%;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background: #000;
+}
+
+.account__title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.account-block {
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #111;
+}
+
+.account-block--info p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.account-block--actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.account-block--stats p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.account-block--form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.account__code-snippet {
+    background: #111;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.account__code-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.account__code {
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+
+.visits-table {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 2fr 1fr;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.visits-table thead,
+.visits-table tbody,
+.visits-table tr {
+    display: contents;
+}
+
+.visits-table th,
+.visits-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.visits-table thead th {
+    background-color: #660d0d;
+    color: white;
+    font-weight: bold;
+}
+
+.visits-table tbody tr:nth-child(even) td {
+    background-color: #fff;
+    color: #111;
+}
+
+.visits-table tbody tr:nth-child(odd) td {
+    background-color: #333;
+    color: #fff;
+}
+
+.visits-table {
+    overflow-x: auto;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .account {
+        width: 90%;
+    }
+
+    .header__logo {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__description {
+        display: none;
+    }
+
+    .header {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+
+
+    .account-block--actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    .account-block--form-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__description {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

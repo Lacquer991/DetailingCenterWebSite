@@ -1,0 +1,104 @@
+.about {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 15px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.about__title {
+    color: #ffffff;
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-block {
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.about-block--values {
+    padding: 40px;
+}
+
+.about-block--guarantee {
+}
+
+.about-block--howto {
+    padding: 35px;
+}
+
+.about-block__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.about-block__text {
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about-block__list {
+    list-style: disc;
+    padding-left: 20px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.about-block__list-item {
+    margin-bottom: 8px;
+}
+
+.about-block__steps {
+    list-style: decimal;
+    padding-left: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.about-block__step {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+    .header__logo {
+        display: none;
+    }
+
+    .header__subtitle {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__description {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

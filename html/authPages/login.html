@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+          content="LCQ Detail, вход, авторизация, личный кабинет, логин, доступ к услугам">
+    <meta name="description"
+          content="Вход в личный кабинет LCQ Detail для записи на услуги и управления профилем.">
+    <title>LCQ Detail-login</title>
+    <link rel="stylesheet" href="/css/baseStyle.css">
+    <link rel="stylesheet" href="/css/loginStyle.css">
+    <script type="module" src="/js/PageLoad.js"></script>
+    <script type="module" src="/js/auth/login.js"></script>
+
+</head>
+<body class="page">
+
+<header class="header">
+    <div class="header__logo">LCQ<br>DETAIL</div>
+    <nav class="header__nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/index.html">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/aboutPage/index.html">О нас</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main">
+    <div class="login">
+        <h2 class="login__title">LCQ DETAIL</h2>
+        <div class="login__box">
+            <form class="login__form">
+                <div class="login__group login__group--email">
+                    <label class="login__label" for="email">Введите почту или номер телефона</label>
+                    <input class="login__input" type="email" id="email" placeholder="почта/ номер телефона" required>
+                </div>
+
+                <div class="login__group login__group--password">
+                    <label class="login__label" for="password">Введите пароль</label>
+                    <input class="login__input" type="password" id="password" placeholder="пароль" required>
+                </div>
+
+                <div class="login-buttons">
+                    <button type="submit" class="btn btn--primary">Войти</button>
+                    <a href="registration.html" class="btn btn--secondary">Регистрация</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<footer class="footer">
+    <div class="footer__left">
+        <div class="footer__logo">
+            <p class="footer__text">LCQ<br>DETAIL</p>
+            <div id="loadTime"></div>
+        </div>
+        <div class="footer__contacts">
+            <p class="footer__text">lcqDtl@gmail.com</p>
+            <p class="footer__text">+7 (999) 999-99-99</p>
+        </div>
+    </div>
+    <div class="footer__right">
+        <nav class="nav footer__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/aboutPage/index.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>

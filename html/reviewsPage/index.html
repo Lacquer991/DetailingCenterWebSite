@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+          content="LCQ Detail, отзывы клиентов, мнения, впечатления, рекомендации, автосервис, детейлинг">
+    <meta name="description"
+          content="Отзывы клиентов о работе LCQ Detail. Реальные мнения о мойке, полировке и защите автомобилей.">
+    <title>LCQ Detail - Отзывы</title>
+    <link rel="stylesheet" href="/css/baseStyle.css">
+    <link rel="stylesheet" href="/css/reviewStyle.css">
+    <script type="module" src="/js/PageLoad.js"></script>
+    <script type="module" src="/DetailingCenterWebSite/js/reviews/ReviewsModule.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="header__logo">LCQ<br>DETAIL</div>
+    <div class="header__description">
+        <h2 class="header__title">Отзывы наших клиентов</h2>
+        <p class="header__subtitle">Честные отзывы о нашей работе</p>
+    </div>
+    <nav class="header__nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/index.html">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/reviewsPage/index.html">Отзывы</a></li>
+            <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/galleryPage/index.html">Галерея</a></li>
+            <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/servicesPage/index.html">Услуги</a></li>
+            <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/aboutPage/index.html">О нас</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main">
+
+    <section id="top-services" class="top-services">
+        <h2 class="top-services__title">Лучшие услуги по вашему выбору</h2>
+        <div id="top-services-list" class="top-services__list"></div>
+    </section>
+
+    <button id="open-form-btn" class="btn btn--primary">Оставить отзыв</button>
+
+    <div id="review-form-container">
+        <form id="review-form">
+            <label>
+                <input type="text" name="author" placeholder="Имя и фамилия" required>
+            </label>
+            <label>
+                <select name="service" required>
+                    <option value="">Выберете услугу</option>
+                    <option value="Мойка кузова">Мойка кузова</option>
+                    <option value="Полировка кузова">Полировка кузова</option>
+                    <option value="Детейлинг салона">Детейлинг салона</option>
+                    <option value="Керамика">Керамика</option>
+                    <option value="Химчистка салона">Химчистка салона</option>
+                    <option value="Полировка стекол">Полировка стекол</option>
+                </select>
+            </label>
+            <label>
+                <textarea name="text" placeholder="Оставьте комментарий" required></textarea>
+            </label>
+            <label>
+                <select name="rating" required>
+                    <option value="">Оцените качество работы</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </label>
+            <button type="submit" class="btn btn--secondary">Добавить отзыв</button>
+        </form>
+    </div>
+
+    <div id="review-edit-form-container">
+        <form id="review-edit-form">
+            <label>
+                <input type="text" name="author" placeholder="Имя и фамилия" required>
+            </label>
+            <label>
+                <select name="service" required>
+                    <option value="">Измените услугу</option>
+                    <option value="Мойка кузова">Мойка кузова</option>
+                    <option value="Полировка кузова">Полировка кузова</option>
+                    <option value="Детейлинг салона">Детейлинг салона</option>
+                    <option value="Керамика">Керамика</option>
+                    <option value="Химчистка салона">Химчистка салона</option>
+                    <option value="Полировка стекол">Полировка стекол</option>
+                </select>
+            </label>
+            <label>
+                <textarea name="text" placeholder="Измените комментарий" required></textarea>
+            </label>
+            <label>
+                <select name="rating" required>
+                    <option value="">Измените оценку качества работы</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </label>
+            <button type="submit" class="btn btn--secondary">Подтвердить изменение отзыва</button>
+            <button type="button" id="delete-review-btn" class="btn btn--danger">Удалить отзыв</button>
+        </form>
+    </div>
+
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Загружаем отзывы...</p>
+    </div>
+
+    <section class="reviews"></section>
+
+    <template id="review-template">
+        <article class="reviews__card">
+            <p class="reviews__rating"></p>
+            <header class="reviews__header">
+                <h3 class="reviews__author"></h3>
+                <p class="reviews__service"></p>
+            </header>
+            <div class="reviews__text"><p></p></div>
+            <button class="btn reviews__edit-btn">Редактировать</button>
+        </article>
+    </template>
+
+    <button id="external-reviews-btn" class="btn btn--primary">Загрузить другие отзывы</button>
+</main>
+
+<footer class="footer">
+    <div class="footer__left">
+        <div class="footer__logo">
+            <p class="footer__text">LCQ<br>DETAIL</p>
+            <div id="loadTime"></div>
+        </div>
+        <div class="footer__contacts">
+            <p class="footer__text">lcqDtl@gmail.com</p>
+            <p class="footer__text">+7 (999) 999-99-99</p>
+        </div>
+    </div>
+    <div class="footer__right">
+        <nav class="nav footer__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/galleryPage/index.html">Галерея</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/servicesPage/index.html">Услуги</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="/DetailingCenterWebSite/html/aboutPage/index.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
